@@ -353,26 +353,8 @@ void LCD_Driver::LCD_DisChar_1207(int Xchar, int Ychar, int Char_Offset, int Col
     const unsigned char *ptr = &Font12_Table[0];
 	
 	for(Page = 0; Page < 8; Page ++ ) 
-	{
+	        for(Column = 0; Column < 8; Column ++ ) 
+		                LCD_SetPoint(Xchar + Column, Ychar + Page, Color);
 
-        for(Column = 0; Column < 8; Column ++ ) 
-		//{    //chinese character 16 pixels width, 16 pixels height
- 		//if(Column == 8)
-		//	ptr++;
-           // if(*ptr & (0x80 >> (Column % 8)))      //>> right shift the bits of 0x80 (1000 0000) by (colum%8) one bit by one bit
-                LCD_SetPoint(Xchar + Column, Ychar + Page, Color);
-
-      	//  }// Write a line with 16 columns wide  (16pixels width)
-
-       // ptr++;
-
-    }// Write all 16 rows
-	
-	
-	
-	
-	
-	
-
-    
+        
 }
