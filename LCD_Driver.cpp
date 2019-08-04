@@ -352,7 +352,7 @@ void LCD_Driver::LCD_DisChar_1207(int Xchar, int Ychar, int Char_Offset, int Col
     int Page = 0, Column = 0;
     const unsigned char *ptr = &Font12_Table[0];
 	
-	for(Page = 0; Page < 16; Page ++ ) 
+	for(Page = 0; Page < 8; Page ++ ) 
 	{
 
         for(Column = 0; Column < 8; Column ++ ) 
